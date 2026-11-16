@@ -1,7 +1,7 @@
 # hiyori-esthe-chatbot
 
 エステサロンの「予約前の質問」に 24 時間答える、Dify 製のチャットボットです。
-架空のフェイシャルエステサロン「private esthe salon hiyori」を題材にした、Web デザイナー(cookie-web-lab)が制作したポートフォリオ作品です。
+架空のフェイシャルエステサロン「private esthe salon hiyori」を題材にした、Web デザイナーのりほが制作したポートフォリオ作品です。
 
 **デモURL:** https://udify.app/chat/a8kDznLlJq3tvNCC
 
