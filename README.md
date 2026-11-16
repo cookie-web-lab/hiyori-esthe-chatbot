@@ -1,9 +1,12 @@
 # hiyori-esthe-chatbot
 
 エステサロンの「予約前の質問」に 24 時間答える、Dify 製のチャットボットです。
-架空のフェイシャルエステサロン「private esthe salon hiyori」を題材にした、Web デザイナー向けのポートフォリオ作品です。
+架空のフェイシャルエステサロン「private esthe salon hiyori」を題材にした、Web デザイナー(cookie-web-lab)が制作したポートフォリオ作品です。
 
 **デモURL:** https://udify.app/chat/a8kDznLlJq3tvNCC
+
+- 担当:企画・要件定義・ナレッジ作成・プロンプト設計・テスト・改善(一人で担当、制作期間:1日)
+- ※無料枠で動かしているため、利用が集中すると一時的に答えられない場合があります
 
 ## このボットについて
 
@@ -11,6 +14,12 @@
 
 個人で営業するエステサロンは、施術中に DM や電話に出られません。
 初めて来店する人には「痛くない?」「勧誘されない?」「料金はいくら?」といった予約前の不安があり、聞けないまま予約をやめてしまうことがあります。
+
+### サロンに導入するメリット
+
+- 施術中や営業時間外も、24時間お客様の質問に答えられる
+- 初めての方の不安(料金・痛み・勧誘)を、予約前に解消できる
+- よくある質問への個別対応の時間を減らせる
 
 ### このボットでできること
 
@@ -33,7 +42,7 @@
 | 項目 | 内容 |
 | --- | --- |
 | 開発ツール | Dify Cloud(Sandbox プラン・無料) |
-| AI モデル | Gemini(Flash-Lite 系)|
+| AI モデル | Gemini 3.5 Flash-Lite(無料枠) |
 | 検索 | ナレッジ検索(ベクトル検索、埋め込みモデル gemini-embedding-001) |
 | アプリの種類 | チャットボット(ワークフローは使わないシンプルな構成) |
 
@@ -131,6 +140,17 @@
 │   └── hiyori-chatbot.ifpkg Dify のエクスポートファイル
 └── images/                  スクショ画像
 ```
+
+### ファイル一覧
+
+| ファイル | 内容 |
+| --- | --- |
+| [docs/requirements.md](docs/requirements.md) | 要件定義書 |
+| [knowledge/esthe_faq.md](knowledge/esthe_faq.md) | ナレッジ(よくある質問) |
+| [prompt/system_prompt.md](prompt/system_prompt.md) | ボットの指示文 |
+| [prompt/followup_prompt.md](prompt/followup_prompt.md) | 次の質問ボタン用の指示文 |
+| [dify/hiyori-chatbot.ifpkg](dify/hiyori-chatbot.ifpkg) | Dify のエクスポートファイル |
+| [images/](images/) | スクショ画像 |
 
 Dify のエクスポートファイルは、Dify の「アプリを DSL からインポート」から読み込めます。
 ナレッジは含まれないため、`knowledge/esthe_faq.md` を別途アップロードしてください。
